@@ -1,0 +1,33 @@
+---
+import Image from "astro/components/Image.astro";
+
+export interface Props {
+  id?: string;
+  ariaLabel?: string;
+  class?: string;
+}
+
+const { id, ariaLabel, class: className = "" } = Astro.props;
+
+import ChevronDown from "../icons/ChevronDown.svg";
+import Planet from "../icons/Planet.svg";
+---
+
+<el-dropdown class="inline-block">
+  <button
+    class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold inset-ring-1 inset-ring-white/5 hover:bg-white/20"
+  >
+    <Planet class="size-5" />
+  </button>
+  <el-menu
+    anchor="bottom end"
+    popover
+    class="w-12 bg-primary/20 rounded-2xl"
+  >
+    <slot />
+  </el-menu>
+</el-dropdown>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+  type="module"></script>
