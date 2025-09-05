@@ -1,4 +1,5 @@
 ---
+import Button from "../atoms/Button.astro";
 import Card from "../atoms/Card.astro";
 import Section from "../atoms/Section.astro";
 import CardHelp from "../molecules/CardHelp.astro";
@@ -36,6 +37,11 @@ const {
           />
         ))
       }
+    </div>
+
+    <div class="pt-20 flex justify-center gap-x-6">
+      <Button class="p-4 rounded-2xl bg-primary text-primary-foreground font-bold">{buttonTextDemoHelper}</Button>
+      <Button class="p-4 rounded-2xl">{buttonTextSupportHelper}</Button>
     </div>
   </Card>
 </Section>
