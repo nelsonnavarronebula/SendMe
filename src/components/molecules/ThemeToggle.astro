@@ -1,0 +1,16 @@
+---
+import Button from "../atoms/Button.astro";
+import IconMoon from "../icons/Moon.svg";
+import IconSun from "../icons/Sun.svg";
+---
+
+<Button
+  id="themeToggle"
+  ariaLabel="Cambiar tema"
+  class="border-2 border-primary/20 hover:bg-primary/10 text-sm transition-all size-9 rounded-md h-9 w-9 flex items-center justify-center [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
+>
+  <span class="block dark:hidden"><IconSun /></span>
+  <span class="hidden dark:block"><IconMoon /></span>
+</Button>
+
+<script src="../../../src/utils/ThemeToggle" is:inline></script>

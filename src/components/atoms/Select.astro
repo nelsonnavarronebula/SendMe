@@ -1,0 +1,28 @@
+---
+import Image from "astro/components/Image.astro";
+
+export interface Props {
+  id?: string;
+  ariaLabel?: string;
+  class?: string;
+}
+
+const { id, ariaLabel, class: className = "" } = Astro.props;
+
+import Planet from "../icons/Planet.svg";
+---
+
+<el-dropdown class="inline-block">
+  <button
+    class="border-2 border-primary/20 hover:bg-primary/10 text-sm transition-all size-9 rounded-md h-9 w-9 flex items-center justify-center [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 dark:bg-input/30 dark:border-input dark:hover:bg-input/50 text-black dark:text-white"
+  >
+    <Planet class="size-5" />
+  </button>
+  <el-menu anchor="bottom" popover class="w-12 bg-primary/80 rounded-2xl text-black">
+    <slot />
+  </el-menu>
+</el-dropdown>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+  type="module"></script>

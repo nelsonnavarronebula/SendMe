@@ -1,0 +1,16 @@
+---
+import ContactButton from "../molecules/ContactButton.astro";
+import Language from "../molecules/Language.astro";
+import ThemeToggle from "../molecules/ThemeToggle.astro";
+---
+
+<nav
+  class="fixed top-0 w-full bg-background/90 flex items-center justify-between px-6 py-4 border-b z-50 backdrop-blur-sm border-border"
+>
+  <div>SendMe</div>
+  <div class="flex gap-x-2">
+    <ThemeToggle />
+    <Language />
+    <ContactButton />
+  </div>
+</nav>

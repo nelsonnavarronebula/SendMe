@@ -1,0 +1,23 @@
+---
+import Select from "../atoms/Select.astro";
+---
+
+<Select>
+  <div>
+    <a
+      id="btn-es"
+      class="block px-4 py-2 text-sm text-black hover:bg-primary font-bold"
+      onclick="localStorage.setItem('language','es'); window.location.href='/es/';"
+    >
+      ES
+    </a>
+
+    <a
+      id="btn-en"
+      class="block px-4 py-2 text-sm text-black hover:bg-primary font-bold"
+      onclick="localStorage.setItem('language','en'); window.location.href='/en/';"
+    >
+      EN</a
+    >
+  </div>
+</Select>
