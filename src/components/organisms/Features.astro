@@ -1,0 +1,43 @@
+---
+import Button from "../atoms/Button.astro";
+import Card from "../atoms/Card.astro";
+import Features from "../molecules/Features.astro";
+
+const { titleFeatures, titleFeaturesSection, subParagraphFeatures, features } =
+  Astro.props;
+---
+
+<section
+  class="min-h-[calc(100vh-0px)] flex flex-col items-center justify-center text-foreground overflow-hidden pt-16 gap-y-6"
+>
+  <h2
+    class="w-3/5 text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+  >
+    {titleFeatures}
+    <span class="text-primary"> {titleFeaturesSection}</span>
+  </h2>
+
+  <p class="w-4/5 text-center text-lg text-muted-foreground">
+    {subParagraphFeatures}
+  </p>
+
+  <div class="grid grid-cols-4 mx-30 gap-x-10 gap-y-5 ">
+    {
+      features.map((faqs: any) => (
+        <div class="flex flex-col justify-center items-center gap-y-4 bg-primary/20 text-left p-4 rounded-xl">
+          <Card class="w-14 h-14 bg-amber-200 rounded-xl flex justify-center items-center">
+            a
+          </Card>
+
+          <Features
+            title={faqs.title}
+            subtitle={faqs.subtitle}
+            description={faqs.description}
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  <Button class="p-2 rounded-lg font-bold bg-muted hover:bg-muted/80">Mas Caracteristicas</Button>
+</section>
