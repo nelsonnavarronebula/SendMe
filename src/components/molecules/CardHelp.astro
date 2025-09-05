@@ -1,0 +1,14 @@
+---
+const { title, icon, subtitle, color } = Astro.props;
+---
+
+<a
+  href="#"
+  class=`bg-gradient-to-br backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 group hover:shadow-2xl  ${color}`
+>
+  <div class="text-4xl mb-4">{icon}</div>
+  <h4 class="font-bold text-lg mb-3 group-hover:text-primary transition-colors">
+    {title}
+  </h4>
+  <p class="text-muted-foreground leading-relaxed">{subtitle}</p>
+</a>
