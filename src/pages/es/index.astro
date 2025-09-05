@@ -1,9 +1,11 @@
 ---
 import Hero from "../../components/organisms/Hero.astro";
+import Pricing from "../../components/organisms/Pricing.astro";
 import { frontmatter } from "../../content/es/index.mdx";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout>
   <Hero {...frontmatter} />
+  <Pricing {...frontmatter} />
 </Layout>

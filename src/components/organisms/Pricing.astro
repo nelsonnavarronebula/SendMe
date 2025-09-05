@@ -1,0 +1,41 @@
+---
+import CardsPricing from "../molecules/CardsPricing.astro";
+
+const {
+  titlePricing,
+  titlePricingSection,
+  subParagraphPricing,
+  titleFaqPricing,
+  faqsPricing,
+} = Astro.props;
+---
+
+<section
+  class="min-h-[calc(100vh-0px)] flex flex-col items-center justify-center text-foreground overflow-hidden pt-16 gap-y-6"
+>
+  <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+    {titlePricing}
+    <span class="text-primary"> {titlePricingSection}</span>
+  </h2>
+
+  <p class="text-lg text-muted-foreground">
+    {subParagraphPricing}
+  </p>
+
+  <CardsPricing />
+
+  <h3 class="my-10 text-2xl font-bold text-foreground mb-8">
+    {titleFaqPricing}
+  </h3>
+
+  <div class="grid grid-cols-2 mx-30 gap-x-10 gap-y-5">
+    {
+      faqsPricing.map((faqs: any) => (
+        <div class="text-left">
+          <h4 class="font-semibold text-foreground mb-2">{faqs.question}</h4>
+          <p class="text-muted-foreground text-sm">{faqs.answer}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
