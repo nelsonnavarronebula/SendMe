@@ -9,21 +9,16 @@ export interface Props {
 
 const { id, ariaLabel, class: className = "" } = Astro.props;
 
-import ChevronDown from "../icons/ChevronDown.svg";
 import Planet from "../icons/Planet.svg";
 ---
 
 <el-dropdown class="inline-block">
   <button
-    class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white/10 px-3 py-2 text-sm font-semibold inset-ring-1 inset-ring-white/5 hover:bg-white/20"
+    class="border-2 border-primary/20 hover:bg-primary/10 text-sm transition-all size-9 rounded-md h-9 w-9 flex items-center justify-center [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 dark:bg-input/30 dark:border-input dark:hover:bg-input/50 text-black dark:text-white"
   >
     <Planet class="size-5" />
   </button>
-  <el-menu
-    anchor="bottom end"
-    popover
-    class="w-12 bg-primary/20 rounded-2xl"
-  >
+  <el-menu anchor="bottom" popover class="w-12 bg-primary/80 rounded-2xl text-black">
     <slot />
   </el-menu>
 </el-dropdown>

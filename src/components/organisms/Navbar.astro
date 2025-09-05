@@ -1,12 +1,16 @@
 ---
-import Select from "../atoms/Select.astro";
+import ContactButton from "../molecules/ContactButton.astro";
 import Language from "../molecules/Language.astro";
 import ThemeToggle from "../molecules/ThemeToggle.astro";
 ---
 
 <nav
-  class="w-full flex items-center justify-between px-6 py-4 border-b border-black/10"
+  class="fixed top-0 w-full bg-background/90 flex items-center justify-between px-6 py-4 border-b z-50 backdrop-blur-sm border-border"
 >
-  <div><ThemeToggle /></div>
-  <div><Language /></div>
+  <div>SendMe</div>
+  <div class="flex gap-x-2">
+    <ThemeToggle />
+    <Language />
+    <ContactButton />
+  </div>
 </nav>
