@@ -1,5 +1,6 @@
 ---
 import Card from "../atoms/Card.astro";
+import Section from "../atoms/Section.astro";
 import CardHelp from "../molecules/CardHelp.astro";
 const {
   titleHelper,
@@ -10,9 +11,7 @@ const {
 } = Astro.props;
 ---
 
-<section
-  class="min-h-[calc(100vh-0px)] flex flex-col items-center justify-center text-foreground overflow-hidden pt-16 gap-y-6 bg-muted/30 mt-2 py-8"
->
+<Section class='flex-col gap-y-6 bg-muted/30'>
   <Card
     class="relative bg-gradient-to-r from-primary/15 via-accent/15 to-primary/15 rounded-3xl p-8 lg:p-16 text-center border border-primary/20 shadow-2xl overflow-hidden w-4/5"
   >
@@ -23,7 +22,9 @@ const {
       {subParagraphHelper}
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-4 xl:gap-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-4 xl:gap-8"
+    >
       {
         featuresHelper.map((feature: any) => (
           <CardHelp
@@ -37,4 +38,4 @@ const {
       }
     </div>
   </Card>
-</section>
+</Section>
