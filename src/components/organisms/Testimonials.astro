@@ -1,0 +1,44 @@
+---
+import CardTestimonials from "../molecules/CardTestimonials.astro";
+import testimonials from "../../data/testimonials.json";
+import CardDataTestimonial from "../molecules/CardDataTestimonial.astro";
+
+const {
+  titleTestimonials,
+  titleTestimonialsSection,
+  subParagraphTestimonials,
+  statsTestimonial,
+} = Astro.props;
+---
+
+<section
+  class="min-h-[calc(100vh-0px)] flex flex-col items-center justify-center text-foreground overflow-hidden pt-16 gap-y-6 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10"
+>
+  <h2
+    class="w-3/5 text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground"
+  >
+    {titleTestimonials}
+    <span class="text-primary"> {titleTestimonialsSection}</span>
+  </h2>
+
+  <p class="w-4/5 text-center text-lg text-muted-foreground">
+    {subParagraphTestimonials}
+  </p>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mx-10">
+    {
+      testimonials.map((testimonial: any) => (
+        <CardTestimonials
+          quote={testimonial.quote}
+          author={testimonial.author}
+          role={testimonial.role}
+          company={testimonial.company}
+          rating={testimonial.rating}
+          photo={testimonial.photo}
+        />
+      ))
+    }
+  </div>
+
+  <CardDataTestimonial statsTestimonial={statsTestimonial} />
+</section>
