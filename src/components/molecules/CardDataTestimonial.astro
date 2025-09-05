@@ -1,0 +1,16 @@
+---
+const { statsTestimonial } = Astro.props;
+---
+
+<div
+  class="grid md:grid-cols-4 text-center bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 lg:p-12 w-4/5 lg:w-2/3"
+>
+  {
+    statsTestimonial.map((stast: any) => (
+      <div class="text-left">
+        <div class="text-3xl font-bold text-primary mb-2">{stast.value}</div>
+        <div class="text-muted-foreground">{stast.label}</div>
+      </div>
+    ))
+  }
+</div>

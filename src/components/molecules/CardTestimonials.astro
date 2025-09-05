@@ -1,0 +1,50 @@
+---
+import Image from "astro/components/Image.astro";
+import Card from "../atoms/Card.astro";
+import CircleImage from "../atoms/CircleImage.astro";
+import Star from "../icons/Star.svg";
+
+const { quote, author, role, company, rating, photo } = Astro.props;
+console.log(photo);
+
+const maxStars = 5;
+const starsArray = Array.from({ length: maxStars });
+---
+
+<Card
+  class="border-2 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/20 p-4 flex flex-col justify-between h-full rounded-lg gap-y-4"
+>
+  <div class="flex gap-1">
+    {
+      starsArray.map((_, i) => (
+        <Star
+          class={`w-4 h-4 ${i < rating ? "text-primary fill-primary" : "text-gray-300 fill-gray-300"}`}
+        />
+      ))
+    }
+  </div>
+
+  <p class="text-muted-foreground leading-relaxed">{quote}</p>
+
+  <div class="flex items-center space-x-3 pt-4 border-t border-border/50 mt-4">
+    <CircleImage>
+      <Image
+        src="https://acortar.link/WB0Qvz"
+        alt={author}
+        width={800}
+        height={600}
+        format="webp"
+        quality={50}
+        loading="lazy"
+        class="w-full h-full object-cover"
+      />
+    </CircleImage>
+
+    <div>
+      <p class="font-semibold text-foreground">{author}</p>
+      <p class="text-sm text-muted-foreground">
+        {role} en {company}
+      </p>
+    </div>
+  </div>
+</Card>

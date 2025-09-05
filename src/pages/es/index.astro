@@ -2,6 +2,7 @@
 import Features from "../../components/organisms/Features.astro";
 import Hero from "../../components/organisms/Hero.astro";
 import Pricing from "../../components/organisms/Pricing.astro";
+import Testimonials from "../../components/organisms/Testimonials.astro";
 import { frontmatter } from "../../content/es/index.mdx";
 import Layout from "../../layouts/Layout.astro";
 ---
@@ -10,4 +11,5 @@ import Layout from "../../layouts/Layout.astro";
   <Hero {...frontmatter} />
   <Pricing {...frontmatter} />
   <Features {...frontmatter} />
+  <Testimonials {...frontmatter} />
 </Layout>

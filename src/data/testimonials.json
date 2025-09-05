@@ -1,0 +1,50 @@
+[
+  {
+    "quote": "Enviamos más de 50,000 SMS mensuales con Send Me. La tasa de entrega del 98% y la facilidad para segmentar audiencias nos ha permitido aumentar las conversiones un 65%.",
+    "author": "María González",
+    "role": "Directora de Marketing",
+    "company": "TechCorp",
+    "rating": 5,
+    "photo": "https://acortar.link/WB0Qvz"
+  },
+  {
+    "quote": "La automatización de campañas de email masivo nos ahorró 15 horas semanales. Los carritos abandonados ahora se recuperan automáticamente con una tasa de éxito del 35%.",
+    "author": "Carlos Ruiz",
+    "role": "CEO",
+    "company": "RetailMax",
+    "rating": 4,
+    "photo": "https://acortar.link/WB0Qvz"
+  },
+  {
+    "quote": "Las campañas SMS promocionales generaron un ROI de 4:1 en el primer mes. La personalización automática y los horarios optimizados son increíbles.",
+    "author": "Ana Morales",
+    "role": "Growth Manager",
+    "company": "EcommercePlus",
+    "rating": 5,
+    "photo": "https://acortar.link/WB0Qvz"
+  },
+  {
+    "quote": "Enviamos confirmaciones y notificaciones por SMS a nuestros 10,000 clientes mensuales. La integración con nuestro CRM fue instantánea y sin complicaciones.",
+    "author": "Diego Fernández",
+    "role": "Operations Manager",
+    "company": "ServicePro",
+    "rating": 4,
+    "photo": "https://acortar.link/WB0Qvz"
+  },
+  {
+    "quote": "Los emails transaccionales y SMS de verificación llegan en segundos. La confiabilidad del 99.9% de uptime es crucial para nuestras operaciones financieras.",
+    "author": "Laura Santos",
+    "role": "Customer Success",
+    "company": "FinanceApp",
+    "rating": 5,
+    "photo": "https://acortar.link/WB0Qvz"
+  },
+  {
+    "quote": "Las campañas de SMS geolocalizadas aumentaron nuestros pedidos en horarios específicos un 45%. La API de Send Me se integró perfectamente con nuestra app.",
+    "author": "Roberto Kim",
+    "role": "Jefe de Marketing",
+    "company": "FoodDelivery",
+    "rating": 5,
+    "photo": "https://acortar.link/WB0Qvz"
+  }
+]
