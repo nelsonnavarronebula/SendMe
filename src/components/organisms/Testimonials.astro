@@ -2,6 +2,7 @@
 import CardTestimonials from "../molecules/CardTestimonials.astro";
 import testimonials from "../../data/testimonials.json";
 import CardDataTestimonial from "../molecules/CardDataTestimonial.astro";
+import Section from "../atoms/Section.astro";
 
 const {
   titleTestimonials,
@@ -11,8 +12,8 @@ const {
 } = Astro.props;
 ---
 
-<section
-  class="min-h-[calc(100vh-0px)] flex flex-col items-center justify-center text-foreground overflow-hidden pt-16 gap-y-6 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 py-8"
+<Section
+  class="flex-col gap-y-6 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10"
 >
   <h2
     class="w-3/5 text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground"
@@ -41,4 +42,4 @@ const {
   </div>
 
   <CardDataTestimonial statsTestimonial={statsTestimonial} />
-</section>
+</Section>

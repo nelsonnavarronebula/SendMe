@@ -1,4 +1,5 @@
 ---
+import Section from "../atoms/Section.astro";
 import ButtonDemo from "../molecules/ButtonDemo.astro";
 import CardHero from "../molecules/CardHero.astro";
 import StatsHero from "../molecules/StatsHero.astro";
@@ -7,8 +8,8 @@ const { title, titleSection, subParagraph, buttonTextDemo, stats } =
   Astro.props;
 ---
 
-<section
-  class="min-h-[calc(100vh-0px)] flex items-center justify-center text-foreground bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 overflow-hidden pt-16 py-8"
+<Section
+  class="bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10"
 >
   <div class="gap-y-4 gap-x-20 flex flex-col sm:flex sm:flex-row mx-9 lg:mx-45">
     <div class="gap-y-4 flex flex-col">
@@ -29,5 +30,5 @@ const { title, titleSection, subParagraph, buttonTextDemo, stats } =
       <CardHero />
     </div>
   </div>
-</section>
+</Section>
 
