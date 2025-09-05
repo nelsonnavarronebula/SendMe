@@ -3,37 +3,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-size: 16px;
-  --font-family: 'Quicksand', sans-serif;
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --card: #ffffff;
-  --card-foreground: #1a1a1a;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --primary: #fece2f;
-  --primary-foreground: #1a1a1a;
-  --secondary: #FFF8DC;
-  --secondary-foreground: #1a1a1a;
-  --muted: #f8f8f8;
-  --muted-foreground: #6b7280;
-  --accent: #fece2f;
+  /* Base */
+  --background: #ffffff;           /* Fondo general */
+  --foreground: #1a1a1a;           /* Texto principal */
+
+  /* Elementos */
+  --card: #ffffff;                 /* Fondo de tarjetas */
+  --card-foreground: #1a1a1a;      /* Texto en tarjetas */
+  --popover: #ffffff;              /* Fondo de popovers/dropdowns */
+  --popover-foreground: #1a1a1a;   /* Texto en popovers */
+
+  /* Colores de acción */
+  --primary: #fece2f;              /* Amarillo destacado */
+  --primary-foreground: #1a1a1a;   /* Texto sobre primary */
+  --secondary: #FFF8DC;            /* Beige claro */
+  --secondary-foreground: #1a1a1a; /* Texto sobre secondary */
+  --accent: #fece2f;               /* Igual que primary, úsalo para hover */
   --accent-foreground: #1a1a1a;
-  --destructive: #ef4444;
+
+  /* Estados */
+  --muted: #f8f8f8;                /* Fondos suaves */
+  --muted-foreground: #6b7280;     /* Texto gris medio */
+  --destructive: #ef4444;          /* Rojo error */
   --destructive-foreground: #ffffff;
+
+  /* Bordes & inputs */
   --border: #e5e7eb;
-  --input: transparent;
-  --input-background: #f9fafb;
-  --switch-background: #d1d5db;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
+  --input: #f9fafb;
+  --switch: #d1d5db;
+
+  /* Extra */
   --ring: #fece2f;
-  --chart-1: #fece2f;
-  --chart-2: #FFE55C;
-  --chart-3: #FFED4A;
-  --chart-4: #FFF8DC;
-  --chart-5: #F7DC6F;
-  --radius: 0.75rem;
+
+  /* Sidebar */
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1a1a;
   --sidebar-primary: #fece2f;
@@ -51,26 +53,25 @@
   --card-foreground: #ffffff;
   --popover: #1a1a1a;
   --popover-foreground: #ffffff;
+
   --primary: #fed757;
   --primary-foreground: #111111;
   --secondary: #2a2a2a;
   --secondary-foreground: #ffffff;
-  --muted: #2a2a2a;
-  --muted-foreground: #9ca3af;
   --accent: #fed757;
   --accent-foreground: #111111;
+
+  --muted: #2a2a2a;
+  --muted-foreground: #9ca3af;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
+
   --border: #374151;
   --input: #374151;
+  --switch: #4b5563;
+
   --ring: #fed757;
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --chart-1: #fed757;
-  --chart-2: #FFE55C;
-  --chart-3: #FFED4A;
-  --chart-4: #FFF8DC;
-  --chart-5: #F7DC6F;
+
   --sidebar: #1a1a1a;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #fed757;
@@ -108,10 +109,6 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);

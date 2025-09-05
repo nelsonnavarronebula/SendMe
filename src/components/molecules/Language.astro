@@ -6,18 +6,17 @@ import Select from "../atoms/Select.astro";
   <div>
     <a
       id="btn-es"
-      class="block px-4 py-2 text-sm text-black hover:bg-primary font-bold"
+      class="block px-4 py-2 text-sm text-foreground hover:bg-primary font-bold cursor-pointer"
       onclick="localStorage.setItem('language','es'); window.location.href='/es/';"
     >
       ES
     </a>
-
     <a
       id="btn-en"
-      class="block px-4 py-2 text-sm text-black hover:bg-primary font-bold"
+      class="block px-4 py-2 text-sm text-foreground hover:bg-primary font-bold cursor-pointer"
       onclick="localStorage.setItem('language','en'); window.location.href='/en/';"
     >
-      EN</a
-    >
+      EN
+    </a>
   </div>
 </Select>
