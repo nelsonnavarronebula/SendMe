@@ -1,0 +1,33 @@
+---
+import ButtonDemo from "../molecules/ButtonDemo.astro";
+import CardHero from "../molecules/CardHero.astro";
+import StatsHero from "../molecules/StatsHero.astro";
+
+const { title, titleSection, subParagraph, buttonTextDemo, stats } =
+  Astro.props;
+---
+
+<section
+  class="min-h-[calc(100vh-0px)] flex items-center justify-center text-foreground bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 overflow-hidden pt-16"
+>
+  <div class="gap-y-4 gap-x-20 flex flex-col sm:flex sm:flex-row mx-9 lg:mx-45">
+    <div class="gap-y-4 flex flex-col">
+      <h1
+        class="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+      >
+        {title}
+        <spam class="text-primary">{titleSection}</spam>
+      </h1>
+      <p class="text-lg text-muted-foreground max-w-lg leading-relaxed">
+        {subParagraph}
+      </p>
+      <div><ButtonDemo buttonTextDemo={buttonTextDemo} /></div>
+
+      <StatsHero stats={stats} />
+    </div>
+    <div class="flex justify-center items-center">
+      <CardHero />
+    </div>
+  </div>
+</section>
+
