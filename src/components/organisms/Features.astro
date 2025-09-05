@@ -1,7 +1,7 @@
 ---
 import Button from "../atoms/Button.astro";
 import Card from "../atoms/Card.astro";
-import Features from "../molecules/Features.astro";
+import CardFeatures from "../molecules/CardFeatures.astro";
 
 const { titleFeatures, titleFeaturesSection, subParagraphFeatures, features } =
   Astro.props;
@@ -11,7 +11,7 @@ const { titleFeatures, titleFeaturesSection, subParagraphFeatures, features } =
   class="min-h-[calc(100vh-0px)] flex flex-col items-center justify-center text-foreground overflow-hidden pt-16 gap-y-6"
 >
   <h2
-    class="w-3/5 text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+    class="w-3/5 text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground"
   >
     {titleFeatures}
     <span class="text-primary"> {titleFeaturesSection}</span>
@@ -21,7 +21,9 @@ const { titleFeatures, titleFeaturesSection, subParagraphFeatures, features } =
     {subParagraphFeatures}
   </p>
 
-  <div class="grid grid-cols-4 mx-30 gap-x-10 gap-y-5 ">
+  <div
+    class="grid md:grid-cols-3 lg:grid-cols-4 mx-10 md:mx-30 gap-x-10 gap-y-5"
+  >
     {
       features.map((faqs: any) => (
         <div class="flex flex-col justify-center items-center gap-y-4 bg-primary/20 text-left p-4 rounded-xl">
@@ -29,7 +31,7 @@ const { titleFeatures, titleFeaturesSection, subParagraphFeatures, features } =
             a
           </Card>
 
-          <Features
+          <CardFeatures
             title={faqs.title}
             subtitle={faqs.subtitle}
             description={faqs.description}
@@ -39,5 +41,7 @@ const { titleFeatures, titleFeaturesSection, subParagraphFeatures, features } =
     }
   </div>
 
-  <Button class="p-2 rounded-lg font-bold bg-muted hover:bg-muted/80">Mas Caracteristicas</Button>
+  <Button class="p-2 rounded-lg font-bold bg-muted hover:bg-muted/80"
+    >Mas Caracteristicas</Button
+  >
 </section>
